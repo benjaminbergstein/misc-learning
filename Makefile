@@ -1,5 +1,7 @@
+export DOCKER_IMAGE=ember-learning:latest
+
 build:
-	yarn build . -t ember-learning:latest
+	docker build . -t ${DOCKER_IMAGE}
 
 start:
-	docker run -v $(pwd):/app ember-learning:latest start
+	docker-compose -p misc-learning_development up
