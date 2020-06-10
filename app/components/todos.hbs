@@ -1,0 +1,8 @@
+{{#each this.todos as |item|}}
+  <Todos::Item @item={{item}} @toggleComplete={{this.toggleComplete}} />
+{{/each}}
+
+<form {{on "submit" this.create}}>
+  <input autofocus name="body" />
+  <button>Create todo</button>
+</form>

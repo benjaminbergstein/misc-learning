@@ -1,0 +1,18 @@
+<div>
+<label {{on "click" this.toggleComplete}}>
+  <input
+    type="checkbox"
+    id={{@item.id}}
+    checked={{@item.isComplete}}
+  />
+  {{#if @item.isComplete}}
+  <span style="text-decoration: line-through">
+    {{@item.body}}
+  </span>
+  {{else}}
+  <span>
+    {{@item.body}}
+  </span>
+  {{/if}}
+</label>
+</div>
